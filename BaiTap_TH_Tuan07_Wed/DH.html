@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dong ho</title>
+    <link rel="stylesheet" href="style.css">
+	<script src="DH.js"></script>
+</head>
+<body>
+    <div id="time">Dong ho </div>
+    <script>
+		function dongho(){
+			var today = new Date();
+			var gio = today.getHours();
+			var phut = today.getMinutes();
+			var giay = today.getSeconds();
+            if(gio<10){
+				gio = "0" + gio;
+			}
+			if(phut<10){
+				phut = "0" + phut;
+			}
+			if(giay<10){
+				giay = "0" + giay;
+			}
+            document.getElementById("time").innerHTML = gio + ":" + phut + ":" + giay;
+			setTimeout("dongho()",1000);
+		}
+		dongho();
+	</script>
+</body>
+</html>
